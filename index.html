@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boutique d'Échecs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>La Boutique d'Échecs</h1>
+        <p class="sous-titre">Échangez vos points contre de nouvelles pièces</p>
+    </header>
+
+    <div class="profil">
+        <button class="profil-bouton" id="profil-bouton">
+            J
+        </button>
+
+    <div class="profil-menu" id="profil-menu">
+        <span id="nom-utilisateur">Joueur</span>
+        <a href="login.html" class="deconnexion">Déconnexion</a>
+    </div>
+</div>
+
+    <section class="barre-joueur">
+        <p>Vos points : <span id="points-display">0</span></p>
+        <p>Pièces possédées : <span id="nb-pieces">0</span> / 8</p>
+        <button id="btn-reset" class="secondaire">Recommencer</button>
+    </section>
+
+
+    <p id="message" class="message"></p>
+
+    <main id="boutique">
+        <!-- Les pièces sont ajoutées ici par script.js -->
+    </main>
+
+    <footer>
+        <p>Projet TP – Boutique de jeu d'échecs</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion – Boutique d'Échecs</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+    <header>
+        <h1>La Boutique d'Échecs</h1>
+        <p class="sous-titre">Connectez-vous pour accéder à vos pièces</p>
+    </header>
+
+    <main class="boite-login">
+
+        <!-- FORMULAIRE DE CONNEXION -->
+        <form id="form-connexion">
+            <h2>Connexion</h2>
+
+            <label for="login-pseudo">Pseudo</label>
+            <input type="text" id="login-pseudo" required>
+
+            <label for="login-mdp">Mot de passe</label>
+            <input type="password" id="login-mdp" required>
+
+            <button type="submit">Se connecter</button>
+            <p class="bascule">Pas encore de compte ? <a href="#" id="lien-inscription">Créer un compte</a></p>
+        </form>
+
+        <!-- FORMULAIRE D'INSCRIPTION -->
+        <form id="form-inscription" class="cache">
+            <h2>Créer un compte</h2>
+
+            <label for="ins-pseudo">Pseudo </label>
+            <input type="text" id="ins-pseudo" required>
+
+            <label for="ins-mdp">Mot de passe (4 caractères minimum)</label>
+            <input type="password" id="ins-mdp" required>
+
+            <label for="ins-mdp2">Confirmer le mot de passe</label>
+            <input type="password" id="ins-mdp2" required>
+
+            <button type="submit">Créer mon compte</button>
+            <p class="bascule">Déjà un compte ? <a href="#" id="lien-connexion">Se connecter</a></p>
+        </form>
+
+        <p id="message" class="message"></p>
+    </main>
+
+    <script src="authentification.js"></script>
+    <script src="login.js"></script>
+</body>
+</html>

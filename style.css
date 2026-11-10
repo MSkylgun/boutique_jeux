@@ -1,0 +1,243 @@
+/* ===== COULEURS ===== */
+:root {
+    --fond: #f3ead7;          /* crème */
+    --carte: #fffaf0;         /* blanc cassé */
+    --bois: #6b4a2f;          /* brun */
+    --bois-clair: #c9a77c;    /* bois clair */
+    --texte: #2f2418;         /* brun très foncé */
+    --vert: #3f6b4a;          /* vert sapin */
+    --vert-fonce: #2f5239;
+    --rouge: #a3412f;         /* brique */
+    --or: #b8871e;            /* or patiné */
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    background-color: var(--fond);
+    color: var(--texte);
+    text-align: center;
+}
+
+/* ===== EN-TÊTE ===== */
+header {
+    background-color: var(--bois);
+    color: var(--fond);
+    padding: 25px 15px;
+    border-bottom: 6px solid var(--bois-clair);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+.sous-titre {
+    margin: 8px 0 0 0;
+    font-style: italic;
+}
+
+/* ===== BARRE DU JOUEUR ===== */
+.barre-joueur {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 15px;
+    margin: 20px auto 0 auto;
+    max-width: 800px;
+    background-color: var(--carte);
+    border: 1px solid var(--bois-clair);
+    border-radius: 6px;
+}
+
+.barre-joueur p {
+    margin: 0;
+    font-size: 18px;
+}
+
+#points-display {
+    font-size: 26px;
+    font-weight: bold;
+    color: var(--vert);
+}
+
+/* ===== MESSAGE ===== */
+.message {
+    min-height: 24px;
+    margin: 15px 0 0 0;
+    font-weight: bold;
+}
+
+.message.ok {
+    color: var(--vert);
+}
+
+.message.erreur {
+    color: var(--rouge);
+}
+
+/* ===== BOUTIQUE ===== */
+#boutique {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.carte {
+    width: 210px;
+    padding: 20px 15px;
+    background-color: var(--carte);
+    border: 1px solid var(--bois-clair);
+    border-radius: 6px;
+}
+
+.carte.possedee {
+    background-color: #e8e1cf;
+}
+
+.symbole {
+    font-size: 70px;
+    line-height: 1.1;
+    color: var(--bois);
+}
+
+.symbole.or {
+    color: var(--or);
+}
+
+.carte h2 {
+    margin: 10px 0 8px 0;
+    font-size: 20px;
+}
+
+.description {
+    font-size: 14px;
+    min-height: 55px;
+    margin: 0 0 10px 0;
+}
+
+.prix {
+    font-weight: bold;
+    margin: 0 0 12px 0;
+}
+
+/* ===== BOUTONS ===== */
+button {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 15px;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--vert);
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--vert-fonce);
+}
+
+button:disabled {
+    background-color: #a9a28f;
+    cursor: not-allowed;
+}
+
+button.secondaire {
+    background-color: transparent;
+    color: var(--bois);
+    border: 1px solid var(--bois);
+}
+
+button.secondaire:hover {
+    background-color: var(--bois);
+    color: var(--fond);
+}
+
+/* ===== PIED DE PAGE ===== */
+footer {
+    margin-top: 30px;
+    padding: 15px;
+    font-size: 14px;
+    color: var(--bois);
+}
+/* ===== BULLE PROFIL ===== */
+
+.profil {
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.profil-bouton {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+
+    background-color: var(--bois-clair);
+    color: white;
+
+    border: 2px solid var(--bois-);
+    font-size: 18px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.profil-bouton:hover {
+    background-color: var(--vert);
+}
+
+/* MENU DEROULANT */
+
+.profil-menu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+
+    width: 150px;
+    padding: 12px;
+
+    background-color: var(--carte);
+    border: 1px solid var(--bois-clair);
+    border-radius: 10px;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+.profil-menu.actif {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.profil-menu span {
+    font-weight: bold;
+    color: var(--texte);
+}
+
+.deconnexion {
+    background-color: var(--rouge);
+    color: white;
+    text-decoration: none;
+
+    padding: 8px;
+    border-radius: 6px;
+    font-size: 13px;
+}
+
+.deconnexion:hover {
+    background-color: #ee2608;
+}
